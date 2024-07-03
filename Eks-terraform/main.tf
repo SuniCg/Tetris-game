@@ -34,7 +34,7 @@ data "aws_subnets" "public" {
 }
 #cluster provision
 resource "aws_eks_cluster" "example" {
-  name     = "EKS_CLOUD"
+  name     = "EKS_CLOUD_TETRIS"
   role_arn = aws_iam_role.example.arn
 
   vpc_config {
@@ -49,7 +49,7 @@ resource "aws_eks_cluster" "example" {
 }
 
 resource "aws_iam_role" "example1" {
-  name = "eks-node-group-cloud"
+  name = "eks-node-group-cloud-tetris"
 
   assume_role_policy = jsonencode({
     Statement = [{
